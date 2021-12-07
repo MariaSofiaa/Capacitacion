@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/componentes/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { sofcodeComponent } from './pages/sofcode/sofcode.components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    sofcodeComponent
   ],
   imports: [
     BrowserModule,
