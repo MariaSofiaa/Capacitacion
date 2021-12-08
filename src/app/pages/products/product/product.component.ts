@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Product } from '../interfaces/product.interface';
+import { Product } from './interfaces/product.interface';
 
 @Component({
   selector: 'app-product',
@@ -10,7 +10,7 @@ import { Product } from '../interfaces/product.interface';
 export class ProductComponent implements OnInit {
   
   @Input() product!:Product;
-  @Output() addToCartCilck = new EventEmitter<Product>();
+  @Output() addToCartClick = new EventEmitter<Product>();
 
   constructor() { }
 
@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
   }
 
   onClick(): void{
-    this.addToCartCilck.emit(this.product);
+    this.addToCartClick.emit(this.product);
   }
 
 }

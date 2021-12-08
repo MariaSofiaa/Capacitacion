@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from './services/product.service';
 import { tap } from 'rxjs/operators';
-import { Product } from './interfaces/product.interface';
-import { ProductService } from './services/product.service';
+import { Product } from './product/interfaces/product.interface';
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 
 @Component({
   selector: 'app-products',
-  template: 
-  `
+  template: `
   <section class="products">
     <app-product
         (addToCartClick)="addToCart($event)"
         [product]="product"
-        *ngFor="let product of products"
+        *ngFor= "let product of products"
     ></app-product>
 </section>
   `,
@@ -22,9 +21,9 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
 export class ProductsComponent implements OnInit {
 
   products!: Product[];
-  shoppingCartSvc: any;
 
-  constructor(private productsSvc: ProductService) { }
+
+  constructor(private productsSvc: ProductsService, private shoppingCartSvc: ShoppingCartService) { }
 
   ngOnInit(): void {
     this.productsSvc.getProducts()

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 
 @Component({
@@ -12,8 +12,4 @@ import { ShoppingCartService } from '../../services/shopping-cart.service';
     </mat-toolbar>`,
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent{
-
-  
-
-}
+export class HeaderComponent{}
