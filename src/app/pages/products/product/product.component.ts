@@ -12,7 +12,7 @@ export class ProductComponent {
   
   @Input() product!:Product;
   @Output() addToCartClick = new EventEmitter<Product>();
-
+  
 
 
   onClick(): void{
