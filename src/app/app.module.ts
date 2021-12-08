@@ -8,18 +8,21 @@ import { HeaderComponent } from './shared/componentes/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { sofcodeComponent } from './pages/sofcode/sofcode.components';
-
+import { HttpClientModule} from '@angular/common/http';
+import { CartComponent } from './shared/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    sofcodeComponent
+    sofcodeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     MaterialModule,
-    FormsModule, BrowserAnimationsModule
+    FormsModule, BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

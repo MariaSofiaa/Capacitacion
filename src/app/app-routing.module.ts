@@ -7,6 +7,7 @@ const routes: Routes = [
   {path: 'sofcode', component: sofcodeComponent},
   { path: 'products', 
   loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
+  //evitar el ERROR 404
   {path: '**', redirectTo: '', pathMatch:'full' }
 ];
 

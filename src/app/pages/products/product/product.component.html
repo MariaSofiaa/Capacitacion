@@ -1,0 +1,29 @@
+<mat-card class="card">
+    <!--seccion para el titulo-->
+    <mat-card-header>
+        <mat-card-title>
+          {{product.name}}  
+        </mat-card-title>
+        
+    </mat-card-header>
+
+    <!--seccion para el contenido de la tarjeta-->
+    <mat-card-content>
+        {{product.description}}
+    </mat-card-content>
+
+    <!--Precio-->
+    <mat-card-content>
+        {{product.price | currency}}
+    </mat-card-content>
+
+    <!--aqui se haran todas la funciones de comprar   -->
+    <mat-card-actions>
+        <button mat-flat-button color="primary" 
+        (click)="onClick()">
+            <mat-icon>add_shopping_cart</mat-icon>
+            Comprar
+        </button>
+        
+    </mat-card-actions>
+</mat-card>
