@@ -18,8 +18,13 @@
 
     <!--aqui se haran todas la funciones de comprar   -->
     <mat-card-actions>
-        <button mat-flat-button color="primary" 
-        (click)="onClick()">
+        <button 
+        mat-flat-button 
+        color="primary" 
+        (click)="onClick()"
+        [disabled] = "product.stock == 0"
+        >
+
             <mat-icon>add_shopping_cart</mat-icon>
             Comprar
         </button>
