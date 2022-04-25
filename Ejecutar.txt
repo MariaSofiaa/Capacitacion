@@ -1,0 +1,9 @@
+≧◉◡◉≦ ≧◉◡◉≦ ≧◉◡◉≦ ≧◉◡◉≦ ≧◉◡◉≦
+	
+Terminal 1: ng serve 
+-- port 4200
+
+Terminal 2: npm run serverAPI
+-- port 3000
+
+ᕙ(`▿´)ᕗ ᕙ(`▿´)ᕗ ᕙ(`▿´)ᕗ ᕙ(`▿´)ᕗ
